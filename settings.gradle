@@ -1,2 +1,3 @@
+include ':toolsLib'
 include ':app'
 rootProject.name = "Tools"
