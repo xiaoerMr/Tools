@@ -3,9 +3,6 @@
 
 # 使用方式
 
-[![](https://jitpack.io/v/xiaoerMr/Tools.svg)](https://jitpack.io/#xiaoerMr/Tools)
-
-
 第一步
 
 ```java
