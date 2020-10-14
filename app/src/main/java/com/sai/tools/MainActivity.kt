@@ -13,6 +13,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+
+    // https://jitpack.io/#xiaoerMr/Tools/v0.01
+
     private var socketUtils: SocketUtils? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
