@@ -1,7 +1,12 @@
 
 [![](https://jitpack.io/v/xiaoerMr/Tools.svg)](https://jitpack.io/#xiaoerMr/Tools)
 
-# 使用方式
+[TOC]
+
+# 1: 使用方式
+
+[![](https://jitpack.io/v/xiaoerMr/Tools.svg)](https://jitpack.io/#xiaoerMr/Tools)
+
 
 第一步
 
@@ -22,7 +27,26 @@ dependencies {
 	}
 ```
 
-# Tools
+# 2: Tools目录
 
-android 工具类
+默认为 kotlin 语言
 
+|-  event	
+
+	- LiveDataBus( kotlin ) 
+
+	- LiveEventBus( java )
+
+|- file
+
+|- log
+
+|- socket ( 使用时请放在 协程或者子线程中)
+
+|- system 
+
+|- toast
+
+|-  view
+
+|-  comment 常量类
