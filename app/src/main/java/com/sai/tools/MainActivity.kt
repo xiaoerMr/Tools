@@ -8,6 +8,7 @@ import com.sai.utils.event.LiveEventBus
 import com.sai.utils.log.LogUtils
 import com.sai.utils.socket.SocketUtils
 import com.sai.utils.toast.ToastUtils
+import com.sai.utils.view.SpinnerItemSelectListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -34,20 +35,31 @@ class MainActivity : AppCompatActivity() {
 //        LogUtils.e("RootPath = ${FileUtils.getRootPath(this)}")
 
 //       ---- socket 示例 ----
-        lifecycleScope.launch(Dispatchers.IO) {
-             socketUtils = SocketUtils("192.168.0.105", 8090)
+//        lifecycleScope.launch(Dispatchers.IO) {
+//             socketUtils = SocketUtils("192.168.0.105", 8090)
+//
+//            while (true) {
+//                socketUtils!!.receive()?.let {
+//                    LogUtils.e(it)
+//                }
+//            }
+//        }
+//
+//        send_socket.setOnClickListener {
+//            lifecycleScope.launch(Dispatchers.IO) {
+//                socketUtils?.send("iii")
+//            }
+//        }
 
-            while (true) {
-                socketUtils!!.receive()?.let {
-                    LogUtils.e(it)
-                }
+        val items = mutableListOf("好像是的", "你不怕", "我怕", "你的", "还好", "苹果")
+        my_spinner.setAdapterData(items, object : SpinnerItemSelectListener {
+            override fun onItemSelect(
+                selectPosition: Int,
+                selectItem: String
+            ) {
+                LogUtils.e(selectItem)
             }
-        }
-
-        send_socket.setOnClickListener {
-            lifecycleScope.launch(Dispatchers.IO) {
-                socketUtils?.send("iii")
-            }
-        }
+        })
+        my_spinner1.setAdapterData(items)
     }
 }

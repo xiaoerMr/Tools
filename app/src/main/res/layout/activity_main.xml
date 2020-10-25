@@ -27,7 +27,35 @@
         android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button"/>
+        app:layout_constraintTop_toBottomOf="@id/button" />
 
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorWithe"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:divider="@drawable/item_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/send_socket"
+        app:showDividers="middle">
+
+        <com.sai.utils.view.SpinnerView
+            android:id="@+id/my_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:sai_title="爱好：" />
+
+        <com.sai.utils.view.SpinnerView
+            android:id="@+id/my_spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:sai_title="爱好2爱好：" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
