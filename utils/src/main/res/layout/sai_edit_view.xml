@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/TextTitle"
+        android:id="@+id/EditTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -19,15 +19,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/TextText"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditText"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:gravity="center_vertical|end"
-        tools:text="内容"
+        tools:hint="内容"
         android:textSize="@dimen/sp_16"
+        android:background="@null"
         android:textColor="@color/color_blake"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

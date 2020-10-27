@@ -6,14 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import com.sai.utils.R
-import kotlinx.android.synthetic.main.sai_spinner_view.view.*
 import kotlinx.android.synthetic.main.sai_text_view.view.*
 
-class SaiTextView : FrameLayout {
-
-    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
-        initView(context, attrs)
-    }
+class SaiTextView(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs) {
 
     private var inflater: View? = null
 
@@ -36,5 +31,9 @@ class SaiTextView : FrameLayout {
 
     fun setText(text: String) {
         inflater!!.TextText.text = text
+    }
+
+    init {
+        initView(context, attrs)
     }
 }

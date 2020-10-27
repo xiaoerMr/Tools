@@ -11,10 +11,7 @@ import com.sai.utils.view.adapter.SpinnerAdapter
 import kotlinx.android.synthetic.main.sai_spinner_view.view.*
 import android.widget.AdapterView.OnItemSelectedListener
 
-class SaiSpinnerView : FrameLayout {
-    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
-        initView(context, attrs)
-    }
+class SaiSpinnerView(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs) {
 
     private var adapter: SpinnerAdapter? = null
     private var inflater: View? = null
@@ -38,9 +35,10 @@ class SaiSpinnerView : FrameLayout {
         inflater!!.SpinnerTitle.text = title
     }
 
-    fun setDefSelectItem( position: Int){
-        inflater!!.SpinnerView.setSelection(position,true)
+    fun setDefSelectItem(position: Int) {
+        inflater!!.SpinnerView.setSelection(position, true)
     }
+
     fun setSpinnerItemSelectListener(listener: SpinnerItemSelectListener) {
         this.listener = listener
     }
@@ -95,8 +93,12 @@ class SaiSpinnerView : FrameLayout {
             }
         }
     }
-}
 
-interface SpinnerItemSelectListener {
-    fun onItemSelect(selectPosition: Int, selectItem: String)
+    init {
+        initView(context, attrs)
+    }
+
+    interface SpinnerItemSelectListener {
+        fun onItemSelect(selectPosition: Int, selectItem: String)
+    }
 }

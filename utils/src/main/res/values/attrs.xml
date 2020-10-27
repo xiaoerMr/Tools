@@ -7,4 +7,9 @@
     <declare-styleable name="sai_text">
         <attr name="sai_tt_title" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="sai_edit">
+        <attr name="sai_ev_title" format="string"/>
+        <attr name="sai_ev_hint" format="string"/>
+    </declare-styleable>
 </resources>

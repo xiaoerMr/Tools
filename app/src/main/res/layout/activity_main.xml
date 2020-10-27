@@ -60,6 +60,13 @@
                 android:layout_height="wrap_content"
                 app:sai_tt_title="文本数据展示：" />
 
+            <com.sai.utils.view.SaiEditView
+                android:id="@+id/my_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sai_ev_title="输入数据："
+                app:sai_ev_hint="请输入数据" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
