@@ -11,7 +11,7 @@ import com.sai.utils.view.adapter.SpinnerAdapter
 import kotlinx.android.synthetic.main.sai_spinner_view.view.*
 import android.widget.AdapterView.OnItemSelectedListener
 
-class SpinnerView : FrameLayout {
+class SaiSpinnerView : FrameLayout {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initView(context, attrs)
     }
@@ -31,7 +31,7 @@ class SpinnerView : FrameLayout {
         //获取参数
         val obtain = context.obtainStyledAttributes(attrs, R.styleable.sai_spinner)
 
-        val title = obtain.getString(R.styleable.sai_spinner_sai_title)
+        val title = obtain.getString(R.styleable.sai_spinner_sai_sp_title)
 
         obtain.recycle()
 

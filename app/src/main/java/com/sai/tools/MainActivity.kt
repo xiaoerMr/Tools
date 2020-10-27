@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
                 LogUtils.e(selectItem)
             }
         })
-        my_spinner1.setAdapterData(items)
+        my_text.setText("sdfsdfsdjfj")
+//        my_text.setText("mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")")
     }
 }

@@ -2,4 +2,5 @@
 <resources>
     <color name="color_blue">#1B30EC</color>
     <color name="color_blake">#363636</color>
+    <color name="color_other">#41A293</color>
 </resources>

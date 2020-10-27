@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="sai_spinner">
-        <attr name="sai_title" format="string"/>
+        <attr name="sai_sp_title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="sai_text">
+        <attr name="sai_tt_title" format="string" />
     </declare-styleable>
 </resources>
