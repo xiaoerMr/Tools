@@ -11,5 +11,9 @@
     <declare-styleable name="sai_edit">
         <attr name="sai_ev_title" format="string"/>
         <attr name="sai_ev_hint" format="string"/>
+        <attr name="sai_ev_type" format="enum">
+            <enum value="0" name="text"/>
+            <enum value="1" name="number"/>
+        </attr>
     </declare-styleable>
 </resources>

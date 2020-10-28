@@ -27,7 +27,7 @@
         android:minHeight="48dp"
         android:gravity="center_vertical|end"
         tools:hint="内容"
-        android:textSize="@dimen/sp_16"
+        android:textSize="@dimen/view_text_size"
         android:background="@null"
         android:textColor="@color/color_blake"
         app:layout_constraintBottom_toBottomOf="parent"

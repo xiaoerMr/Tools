@@ -9,7 +9,7 @@ import com.sai.utils.log.LogUtils
 import com.sai.utils.socket.SocketUtils
 import com.sai.utils.toast.ToastUtils
 import com.sai.utils.view.SaiEditView
-import com.sai.utils.view.SpinnerItemSelectListener
+import com.sai.utils.view.SaiSpinnerView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val items = mutableListOf("好像是的", "你不怕", "我怕", "你的", "还好", "苹果")
-        my_spinner.setAdapterData(items, object : SpinnerItemSelectListener {
+        my_spinner.setAdapterData(items, object : SaiSpinnerView.SpinnerItemSelectListener {
             override fun onItemSelect(
                 selectPosition: Int,
                 selectItem: String
@@ -62,9 +62,14 @@ class MainActivity : AppCompatActivity() {
                 LogUtils.e(selectItem)
             }
         })
-        my_text.setText("sdfsdfsdjfj")
+        my_text.setText("页面")
 //        my_text.setText("mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")")
-        my_edit.setInputListener(object :SaiEditView.InputListener{
+        my_edit.setInputListener(object : SaiEditView.InputListener {
+            override fun inputText(text: String) {
+                LogUtils.e(text)
+            }
+        })
+        my_edit_num.setInputListener(object : SaiEditView.InputListener {
             override fun inputText(text: String) {
                 LogUtils.e(text)
             }

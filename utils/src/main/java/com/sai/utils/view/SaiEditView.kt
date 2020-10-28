@@ -6,9 +6,11 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.FrameLayout
 import com.sai.utils.R
 import kotlinx.android.synthetic.main.sai_edit_view.view.*
+
 
 class SaiEditView(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs) {
 
@@ -26,6 +28,13 @@ class SaiEditView(context: Context, attrs: AttributeSet?) : FrameLayout(context,
         val obtain = context.obtainStyledAttributes(attrs, R.styleable.sai_edit)
         val title = obtain.getString(R.styleable.sai_edit_sai_ev_title)
         val hint = obtain.getString(R.styleable.sai_edit_sai_ev_hint)
+        val type = obtain.getInt(R.styleable.sai_edit_sai_ev_type, 0)
+
+        // 类型：0：默认 文本；  1： number
+        if (type == 1) {
+            inflater!!.EditText.inputType =
+                EditorInfo.TYPE_CLASS_NUMBER or EditorInfo.TYPE_NUMBER_FLAG_DECIMAL
+        }
 
         obtain.recycle()
 
