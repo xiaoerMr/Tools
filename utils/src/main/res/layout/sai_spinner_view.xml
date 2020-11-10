@@ -28,8 +28,11 @@
         android:minWidth="160dp"
         android:minHeight="48dp"
         android:textSize="@dimen/view_text_size"
+        app:layout_constraintWidth_max="0dp"
+        app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/SpinnerTitle"
         app:layout_constraintTop_toTopOf="parent" />
 
 

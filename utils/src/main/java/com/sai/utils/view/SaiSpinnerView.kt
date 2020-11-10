@@ -36,7 +36,11 @@ class SaiSpinnerView(context: Context, attrs: AttributeSet?) : FrameLayout(conte
     }
 
     fun setDefSelectItem(position: Int) {
-        inflater!!.SpinnerView.setSelection(position, true)
+        adapter?.let {
+            if (it.data.size > position) {
+                inflater!!.SpinnerView.setSelection(position, true)
+            }
+        }
     }
 
     fun setSpinnerItemSelectListener(listener: SpinnerItemSelectListener) {

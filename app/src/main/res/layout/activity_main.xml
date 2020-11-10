@@ -16,8 +16,8 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/abc_vector_test"
             android:padding="8dp"
-            android:textAllCaps="false"
             android:text=" 跳转 home 页面"
+            android:textAllCaps="false"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +35,7 @@
 
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -51,7 +52,7 @@
             <com.sai.utils.view.SaiSpinnerView
                 android:id="@+id/my_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 app:sai_sp_title="下拉菜单：" />
 
             <com.sai.utils.view.SaiTextView
@@ -64,17 +65,43 @@
                 android:id="@+id/my_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:sai_ev_title="输入数据："
-                app:sai_ev_hint="请输入数据（默认）" />
+                app:sai_ev_hint="请输入数据（默认）"
+                app:sai_ev_title="输入数据：" />
+
             <com.sai.utils.view.SaiEditView
                 android:id="@+id/my_edit_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:sai_ev_hint="请输入数据（数字，小数）"
                 app:sai_ev_title="输入数据："
-                app:sai_ev_type="number"
-                app:sai_ev_hint="请输入数据（数字，小数）" />
+                app:sai_ev_type="number" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tx1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:minHeight="48dp"
+            android:text="我是不会覆盖右边控件的 ： 1@string/app_name2@string/app_name3@string/app_name4@string/app_name 结束"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/tx2"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tag"
+            app:layout_constraintWidth_max="wrap" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tx2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="80dp"
+            android:text="我是固定的"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tx1"
+            app:layout_constraintTop_toTopOf="@id/tx1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

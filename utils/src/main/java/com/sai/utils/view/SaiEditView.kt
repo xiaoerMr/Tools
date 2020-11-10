@@ -2,6 +2,7 @@ package com.sai.utils.view
 
 import android.content.Context
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -63,6 +64,9 @@ class SaiEditView(context: Context, attrs: AttributeSet?) : FrameLayout(context,
 
     fun getInputText() = inflater!!.EditText.text.toString().trim()
 
+    fun setDefText(text: String){
+        inflater!!.EditText.setText(text)
+    }
     interface InputListener {
         fun inputText(text: String)
     }
