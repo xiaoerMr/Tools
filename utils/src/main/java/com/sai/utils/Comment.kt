@@ -4,6 +4,8 @@ import android.Manifest
 
 const val LogTag = "---Log-"
 
+
+
 // 页面状态
 
 const val state_empty   = 0x1
