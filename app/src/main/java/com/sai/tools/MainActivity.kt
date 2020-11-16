@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import com.sai.utils.bese.BaseActivity
 import com.sai.utils.event.LiveEventBus
-import com.sai.utils.log.LogUtils
+import com.sai.utils.loge
 import com.sai.utils.socket.SocketUtils
 import com.sai.utils.state_error
-import com.sai.utils.toast.ToastUtils
+import com.sai.utils.toast
 import com.sai.utils.view.SaiEditView
 import com.sai.utils.view.SaiSpinnerView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,13 +26,13 @@ class MainActivity : BaseActivity() {
 //       ---- LiveEventBus示例 ----
         LiveEventBus.get().with(Event_Type_Test)
 //        LiveDataBus.with<String>(Event_Type_Test)
-            .observe(this, { ToastUtils.display(this, "---LiveDataBus--> $it") })
+            .observe(this, { toast("---LiveDataBus--> $it") })
 
         button.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
-//        LogUtils.e("RootPath = ${FileUtils.getRootPath(this)}")
+//        loge("RootPath = ${FileUtils.getRootPath(this)}")
 
 //       ---- socket 示例 ----
 //        lifecycleScope.launch(Dispatchers.IO) {
@@ -40,7 +40,7 @@ class MainActivity : BaseActivity() {
 //
 //            while (true) {
 //                socketUtils!!.receive()?.let {
-//                    LogUtils.e(it)
+//                    loge(it)
 //                }
 //            }
 //        }
@@ -58,7 +58,8 @@ class MainActivity : BaseActivity() {
                 selectPosition: Int,
                 selectItem: String
             ) {
-                LogUtils.e(selectItem)
+                loge(selectItem)
+                loge(selectItem)
             }
         })
         my_spinner.setDefSelectItem(4)
@@ -67,13 +68,13 @@ class MainActivity : BaseActivity() {
 //        my_text.setText("mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")mutableListOf(\"好像是的\", \"你不怕\", \"我怕\", \"你的\", \"还好\", \"苹果\")")
         my_edit.setInputListener(object : SaiEditView.InputListener {
             override fun inputText(text: String) {
-                LogUtils.e(text)
+                loge(text)
             }
         })
         my_edit.setDefText("我是默认数据")
         my_edit_num.setInputListener(object : SaiEditView.InputListener {
             override fun inputText(text: String) {
-                LogUtils.e(text)
+                loge(text)
             }
         })
     }

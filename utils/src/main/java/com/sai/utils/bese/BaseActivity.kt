@@ -82,18 +82,18 @@ abstract class BaseActivity : AppCompatActivity() {
                 state_empty -> {
                     loadingAnimation.cancel()
                     it.stateName.text = "暂时没有数据了"
-                    it.stateImg.background = resources.getDrawable(R.drawable.ic_state_empty)
+                    it.stateImg.setImageResource(R.drawable.ic_state_empty)
                 }
 
                 state_error -> {
                     loadingAnimation.cancel()
                     it.stateName.text = "加载错误"
-                    it.stateImg.background = resources.getDrawable(R.drawable.ic_state_error)
+                    it.stateImg.setImageResource(R.drawable.ic_state_error)
                 }
 
                 state_loading -> {
                     it.stateName.text = "加载中"
-                    it.stateImg.background = resources.getDrawable(R.drawable.ic_state_loading)
+                    it.stateImg.setImageResource(R.drawable.ic_state_loading)
                     it.stateImg.animation = loadingAnimation
                     loadingAnimation.start()
                 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_state_loading">
+    <!-- 1： 目标 svg 图片文件 -->
+
+    <!-- 2： name 必须和  目标svg图片文件  中 name标签 一致 -->
+    <!-- 3: animation   为 动画xml文件  -->
+    <target
+        android:name="state_loading"
+        android:animation="@animator/anim_rotate" />
+
+    <!-- 教程 https://www.jianshu.com/p/47b0ae970dd5 -->
+</animated-vector>
