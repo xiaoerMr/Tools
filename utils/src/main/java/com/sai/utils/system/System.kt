@@ -6,8 +6,9 @@ import android.content.Context
 object System {
     /**
      * 获取进程名称
+     *  Context.getProcessName
      */
-    fun getProcessName(context: Context, pid: Int): String? {
+    fun getProcessName( context:Context, pid: Int): String? {
         val systemService = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val runningAppProcesses = systemService.runningAppProcesses
 
@@ -21,4 +22,7 @@ object System {
         return null
     }
 
+    fun getNetState(){
+
+    }
 }

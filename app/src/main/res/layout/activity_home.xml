@@ -13,10 +13,62 @@
         android:layout_height="wrap_content"
         android:text="请求网络"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/button2"/>
+        app:layout_constraintTop_toBottomOf="@id/button2" />
+
+    <Button
+        android:id="@+id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="基础弹窗"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <Button
+        android:id="@+id/dialogList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单选弹窗"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog" />
+
+    <Button
+        android:id="@+id/dialogMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多选弹窗"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogList" />
+
+    <Button
+        android:id="@+id/dialogBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="底部弹窗"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogMultiple" />
+
+    <Button
+        android:id="@+id/dialogData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日期弹窗"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogBottom" />
+
+
+    <Button
+        android:id="@+id/dialogInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入弹窗"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogData" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

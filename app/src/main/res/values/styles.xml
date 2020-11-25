@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+<!--  MaterialDialog 的样式  -->
+    <style name="AppTheme.CustomMaterialDialog" parent="Theme.AppCompat">
+        <item name="md_color_title">@color/dialogTitle</item>
+        <item name="md_color_content">@color/dialogContent</item>
+        <item name="md_color_button_text">@color/dialogButton</item>
+        <item name="md_corner_radius">8dp</item>
+    </style>
 </resources>
