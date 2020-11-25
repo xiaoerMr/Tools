@@ -64,7 +64,6 @@ class HomeActivity : AppCompatActivity() {
 
             }
         }
-
         //基础dialog 按钮不写则不显示该按钮
         dialog.setOnClickListener {
             MaterialDialog(this)
